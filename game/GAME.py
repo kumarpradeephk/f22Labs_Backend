@@ -36,12 +36,14 @@ def process_both_string(randomString,userStr,randomNum):
   print("Number of charcter matches with WRONG_POSITION:= " + str(char_match))
 
 #DRIVER_PROGRAMME  
-rNum=randint(2,20);
+rNum=randint(2,10);
 #USER GUESSING STATS
 randString=generate_random_str(rNum)
 usrStr=input("enter string of length "+ str(rNum)+ ":-")
 print(".......PLAYER GUESSING STATS........")
 process_both_string(randString,usrStr,rNum)
+print("SYSTEM GENERETED:- " + randString)
+print("USER ENTERED STRING:- " + usrStr)
 
 print("---------------------------------------------------")
 #SYSTEM GUESSING STATS
@@ -49,3 +51,5 @@ Sys_randString=generate_random_str(rNum)
 Sys_user_String=generate_random_str(rNum)
 print(".......SYSTEM GUESSING STATS........")
 process_both_string(Sys_randString,Sys_user_String,rNum)
+print("SYSTEM GENERETED ACTUAL:- " + Sys_randString)
+print("SYSTEM GENERETED GUESSED:- " + Sys_user_String)
